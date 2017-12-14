@@ -1,3 +1,12 @@
+const passport = require('passport');
 /**
- * Created by Dyzio on 2017-12-14.
+ * Authentication Route
  */
+module.exports = app => {
+    app.get('/auth/google', passport.authenticate('google', {
+            scope: ['profile', 'email']
+        })
+    );
+    app.get('/auth/google/callback', passport.authenticate('google'));
+};
+
