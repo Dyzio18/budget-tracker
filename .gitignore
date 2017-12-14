@@ -1,7 +1,8 @@
 
 node_modules/
 dist/
-config/keys.js
+dist/**
+src/server/config/keys.js
 
 #IDE ignore
 .idea/
