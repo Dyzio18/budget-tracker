@@ -1,8 +1,11 @@
-
 node_modules/
 dist/
 dist/**
 src/server/config/keys.js
+
+# Logs
+npm-debug.log
+**/**/*.log
 
 #IDE ignore
 .idea/
