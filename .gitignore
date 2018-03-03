@@ -2,6 +2,8 @@ node_modules/
 dist/
 dist/**
 src/server/config/keys.js
+**/*.bundle.js
+**/*.bundle.min.js
 
 # Logs
 npm-debug.log
@@ -9,3 +11,4 @@ npm-debug.log
 
 #IDE ignore
 .idea/
+.vscode/
