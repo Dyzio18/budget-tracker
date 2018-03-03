@@ -4,6 +4,8 @@ dist/**
 src/server/config/keys.js
 **/*.bundle.js
 **/*.bundle.min.js
+yarn.lock
+yarn-error.log
 
 # Logs
 npm-debug.log
