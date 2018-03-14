@@ -6,6 +6,7 @@ src/server/config/keys.js
 **/*.bundle.min.js
 yarn.lock
 yarn-error.log
+note.md
 
 # Logs
 npm-debug.log

@@ -4,8 +4,14 @@
 
 /*
 
-const googleClientID = 'CLIENT ID';
-const googleClientSecret = 'SECRET';
+const googleCredentials = {
+    googleClientID: 'CLIENT ID',
+    googleClientSecret: 'SECRET'
+};
+
+const database = {
+    mongoURI: 'MONGO_DB_DATABASE'
+}
 
 export {googleClientID,googleSecret};
 
