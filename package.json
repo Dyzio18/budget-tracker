@@ -1,5 +1,5 @@
 {
-  "name": "React_Node_Learning",
+  "name": "learning-react-node.js",
   "version": "1.0.0",
   "description": "learning react & node.js",
   "main": "index.js",
@@ -8,15 +8,12 @@
     "npm": "*"
   },
   "scripts": {
-    "start": "node src/server/index.js",
-    "dev": "nodemon src/server/index.js",
-    "lint-client": "./node_modules/.bin/eslint ./src/client/**/*.js --fix --cache",
-    "lint-server": "./node_modules/.bin/eslint ./src/server/**/*.js --fix --cache ",
-    "build": "yarn run build-client && yarn run build-server",
-    "build-client": "webpack --config webpack.client.config.js",
-    "build-server": "webpack --config webpack.server.config.js",
-    "build-server:watch": ".\\node_modules\\.bin\\webpack --config webpack.server.config.js --watch",
-    "build-client:watch": ".\\node_modules\\.bin\\webpack --config webpack.client.config.js --watch"
+    "start": "node ./index.js",
+    "server": "nodemon ./index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\" ",
+    "lint-client": "./node_modules/.bin/eslint ./client/**/*.js --fix --cache",
+    "lint-server": "./node_modules/.bin/eslint ./**/*.js --fix --cache "
   },
   "repository": {
     "type": "git",
@@ -35,6 +32,7 @@
   },
   "homepage": "https://github.com/Dyzio18/react_node_learning#readme",
   "dependencies": {
+    "concurrently": "^3.5.1",
     "cookie-session": "^2.0.0-beta.3",
     "create-react-app": "^1.5.2",
     "express": "^4.16.2",

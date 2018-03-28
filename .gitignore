@@ -1,7 +1,10 @@
 node_modules/
+**/node_modules/
+*/**/node_modules/
+
 dist/
 dist/**
-src/server/config/keys.js
+config/keys.js
 **/*.bundle.js
 **/*.bundle.min.js
 yarn.lock
