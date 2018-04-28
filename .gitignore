@@ -19,5 +19,4 @@ npm-debug.log
 .vscode/
 
 # Keys
-config/keys-prod.js
 config/keys-dev.js
