@@ -4,7 +4,6 @@ node_modules/
 
 dist/
 dist/**
-config/keys.js
 **/*.bundle.js
 **/*.bundle.min.js
 yarn.lock
@@ -18,3 +17,7 @@ npm-debug.log
 #IDE ignore
 .idea/
 .vscode/
+
+# Keys
+config/keys-prod.js
+config/keys-dev.js
