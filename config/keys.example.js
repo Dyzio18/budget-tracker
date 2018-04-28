@@ -1,18 +1,11 @@
 /**
  * Get your own credentials from google API
+ * Setup mongo DB and set cookie key
  */
 
-/*
-
-const googleCredentials = {
-    googleClientID: 'CLIENT ID',
-    googleClientSecret: 'SECRET'
+module.exports = {
+	googleClientID: 'xxx',
+	googleClientSecret: 'xxx',
+	mongoURI: 'mongodb://<user>:<password>@xxx,
+	cookieKey: 'xxx'
 };
-
-const database = {
-    mongoURI: 'MONGO_DB_DATABASE'
-}
-
-export {googleClientID,googleSecret};
-
-*/

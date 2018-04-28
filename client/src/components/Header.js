@@ -1,11 +1,33 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import './header.css';
 
 class Header extends Component {
 
+    renderAuthStatus() {
+        switch(this.props.auth){
+            case null:
+                return;
+            case false:
+                return (
+                    <a href="/auth/google" className="btn btn-primary">Zaloguj</a>
+                );
+            default: 
+                return (
+                    <div>
+                        <button className="btn btn-primary">Zalogowany jako {this.props.auth.name} </button>
+                        <a className="badge badge-info btn btn-link"  href="/api/logout"> Wyloguj </a>
+                    </div>
+                );
+        }
+    }
+    
+
     render() {
+        console.log(this.props)
         return (
             <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-                <a className="navbar-brand" href="#">Habits Tracker</a>
+                <a className="navbar-brand" href="/">Habits Tracker</a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -13,11 +35,15 @@ class Header extends Component {
                 <div className="collapse navbar-collapse" id="navbarColor01">
                     <ul className="navbar-nav mr-auto">
                     </ul> 
-                    <button type="button" class="btn btn-primary">Log In</button>
+                    {this.renderAuthStatus()}
                 </div>
             </nav>
         ); 
     }
 }
 
-export default Header;
+function mapStateToProps(state){
+    return { auth: state.auth };
+}
+
+export default connect(mapStateToProps)(Header);
