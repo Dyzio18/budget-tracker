@@ -6,6 +6,6 @@
 module.exports = {
 	googleClientID: 'xxx',
 	googleClientSecret: 'xxx',
-	mongoURI: 'mongodb://<user>:<password>@xxx,
+	mongoURI: 'mongodb://<user>:<password>@xxx',
 	cookieKey: 'xxx'
 };

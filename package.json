@@ -12,6 +12,7 @@
     "server": "nodemon ./index.js",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\" ",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "lint-client": "./node_modules/.bin/eslint ./client/**/*.js --fix --cache",
     "lint-server": "./node_modules/.bin/eslint ./**/*.js --fix --cache "
   },
@@ -32,6 +33,7 @@
   },
   "homepage": "https://github.com/Dyzio18/react_node_learning#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "concurrently": "^3.5.1",
     "cookie-session": "^2.0.0-beta.3",
     "create-react-app": "^1.5.2",
