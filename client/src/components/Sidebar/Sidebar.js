@@ -1,4 +1,3 @@
-import './Sidebar.css';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -11,13 +10,13 @@ class Sidebar extends Component {
                 return;
             case false:
                 return (
-                    <a href="/auth/google" className="btn btn-primary">Zaloguj</a>
+                    <a href="/auth/google" className="btn btn-primary btn-block">Zaloguj</a>
                 );
             default: 
                 return (
                     <div>
-                        <button className="btn btn-primary">Zalogowany jako {this.props.auth.name} </button>
-                        <a className="badge badge-info btn btn-link"  href="/api/logout"> Wyloguj </a>
+                        <p>Zalogowany jako <span> {this.props.auth.name} </span> </p>
+                        <a className="btn btn-secondary btn-block btn-sm"  href="/api/logout"> Wyloguj </a>
                     </div>
                 );
         }
@@ -27,25 +26,26 @@ class Sidebar extends Component {
     render() {
         return (
             <div className="sidebar"> 
-                <div className="logo">
+                <Link to="/habits" className="logo">
                     Habits Tracker
-                </div>
-
+                </Link>
                 <ul className="nav">
                     <li> 
-                        <a href="/habits"> 
-                            <i class="fas fa-archive"></i> 
+                        <Link to="/habits"> 
+                            <i className="fas fa-archive"></i> 
                             <span>Nawyki</span>
-                        </a> 
+                        </Link> 
                     </li>
                     <li> 
-                        <a href="/habits"> 
-                            <i class="fas fa-calendar"></i> 
-                            <span> Kaledarz </span>
-                        </a> 
+                        <Link to="/habits/new"> 
+                            <i className="fas fa-calendar"></i> 
+                            <span> Dodaj nawyk </span>
+                        </Link> 
                     </li>
-                    
                 </ul>
+                <div className="sidebar__user">
+                    {this.renderAuthStatus()}
+                </div>
             </div>
           );
     }

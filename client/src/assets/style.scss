@@ -1,0 +1,24 @@
+
+@import './variable';
+
+
+.wrapper{
+    background: $grey;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.test1{
+    width: 100%;
+    height: 100%;
+    
+}
+
+// Landing page
+@import './sass/components/landing';
+
+// Workspace & content module
+@import './sass/components/content';
+
+@import './sass/components/sidebar';
+@import './sass/components/habit/habitNew';
