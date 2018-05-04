@@ -3,10 +3,10 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from './../actions';
 
-import Header from './Header';
-const Dashboard = () => <h2>Dashboard (habits)</h2>;
-const HabitNew = () => <h2>HabitNew</h2>;
-const Landing = () => <h2>Landing</h2>;
+import Landing from './Landing/Landing';
+import Sidebar from './Sidebar/Sidebar';
+import Dashboard from './Dashboard/Dashboard';
+import HabitNew from './Habits/HabitNew';
 
 class App extends Component {
 
@@ -17,12 +17,11 @@ class App extends Component {
 
     render = () => {
         return (
-            <div>
+            <div className="container-fluid wrapper">
                 <BrowserRouter>
-                    <div>
-                        <Header />
-                        <div className="container">
-                            <Route exact path="/" component={Landing} />
+                    <div className="row">
+                        <Sidebar />
+                        <div className="content">
                             <Route exact path="/habits" component={Dashboard} />
                             <Route path="/habits/new" component={HabitNew} />
                         </div>

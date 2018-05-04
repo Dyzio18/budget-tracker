@@ -1,0 +1,43 @@
+@import '../../../variable';
+@import './habitForm';
+
+
+.habitAdd__button, {
+    position: fixed;
+    bottom: 50px;
+    right:50px;
+    background: $secondary;
+    color: $grey;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2rem;
+    transition: .3s;
+}
+
+.habitAdd__button:hover {
+    background: $secondaryDark;
+    color: $grey;
+    text-decoration: none;
+    bottom: 60px;
+    right:60px;
+    box-shadow: 10px 10px $primaryDark;
+    transition: .3s;
+
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes example {
+    0%   {background-color: $secondaryDark;}
+    50%  {background-color:$secondary;}
+    100% {background-color:$secondaryDark;}
+}

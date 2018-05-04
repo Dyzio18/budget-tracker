@@ -1,0 +1,30 @@
+@import '../../variable';
+
+.content{
+    background: $grey;
+    position: relative;
+    float: right;
+    width: calc(100% - 180px);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+//TODO: imporove RWD
+.workspace{
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+@media screen and (max-width: $sm){
+    .content{
+        padding: 0;
+    }
+}

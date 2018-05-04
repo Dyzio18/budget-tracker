@@ -5,7 +5,10 @@ const cookieSession = require("cookie-session");
 const passport = require("passport");
 const app = express();
 
+/* Models */
 require("./models/User"); /* Must loaded before passport */
+require("./models/Habit"); 
+
 require("./services/passport");
 
 /* Connect with database */
@@ -23,6 +26,7 @@ app.use(passport.session());
 
 /* Set routes */
 require('./routes/authRoutes')(app);
+require('./routes/habitRoutes')(app);
 
 if(process.env.NODE_ENV === 'production'){
     app.use(express.static('client/build'));

@@ -2,6 +2,8 @@
  * Authentication Route
  */
 const passport = require('passport');
+const cookieSession = require("cookie-session");
+
 module.exports = app => {
 	app.get('/auth/google', passport.authenticate('google', {
 		scope: ['profile', 'email']
@@ -16,7 +18,8 @@ module.exports = app => {
 
     app.get('/api/logout', 
         (req, res) => {
-            req.logout(); 
+            //req.logout(); 
+            req.logOut();
             res.redirect('/');  
         }
     );
