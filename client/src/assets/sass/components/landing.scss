@@ -1,18 +1,124 @@
 @import '../../variable';
+@import '../common/shadow';
 
-
-.landing{
+.landing__header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     min-height: 100vh;
     width: 100%;
-    background: $primaryDark;
+    background: $primaryDark url('./assets/img/plants_1.jpg');
+    background-size:cover;
+    background-attachment:fixed;
     color: #333;
     padding: 100px;
     text-align: center;
+    h1{
+        background: rgba(0, 0, 0, 0.178);
+        color: rgba(240, 227, 227, 0.836);
+        text-shadow: 2px 2px 4px #000000;
+        padding: 100px;
+        font-weight: bold;
+        text-align: center;
+        letter-spacing: 0.8rem;
+        text-transform: uppercase;
+        font-size: 4rem;
+        margin-bottom: 100px;
+    }
+    .btn__googleLogin{
+        background: $brandGoogleRed;
+        padding: 15px 30px;
+        border-radius: 10px;
+        font-weight: bold;
+        color: $white;
+    }
 
 }
 
+%landing__section{
+    padding-top: 180px;
+    padding-bottom: 230px;
+}
+.landing__info{
+    @extend %landing__section;
+    width: 100%;
+    background: $grey;
+
+    .info__title{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        text-align: center;
+        h2{
+            font-weight: bold;
+            color: #333;
+            font-size: 5rem;
+        }
+    }
+
+    .info__box{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .info__card{
+        width: 400px;
+        min-height: 360px;
+        margin-bottom: 50px;
+        background: $white;
+        .info__header{
+            padding: 20px 35px; 
+            text-align: center;
+            img{
+                max-width: 180px;
+                height: auto;
+            }
+        }
+        .info__header--one{background: #f69f09;}
+        .info__header--two{background: #31aa53;}
+        .info__header--three{background: #a857bd;}
+        
+        .info__desc{
+            padding: 20px;
+            .info__subtitle{
+                font-weight: bold;
+            }
+        }
+
+    }
+
+}
+
+
+
 @media screen and (max-width: 600px){
-    .landing{
-        padding: 5px;    
+    .landing__header{
+        padding: 5px;
+        h1{
+            padding: 20px;
+            letter-spacing: 0.6rem;
+            font-size: 2rem;
+        }
     } 
+
+    .landing__info{
+        .info__title{
+            h2{
+                font-size: 2rem;
+            }
+        }
+
+        .info__box{
+            display: flex;
+            flex-direction: column;
+        }
+        .info__card{
+            width: 90%;
+            .info__desc{
+                padding: 10px;
+            }
+        }
+    }
 }

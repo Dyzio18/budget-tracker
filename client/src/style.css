@@ -7,17 +7,97 @@
   width: 100%;
   height: 100%; }
 
-.landing {
+.landing__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   min-height: 100vh;
   width: 100%;
-  background: #2b2d42;
+  background: #2b2d42 url("./assets/img/plants_1.jpg");
+  background-size: cover;
+  background-attachment: fixed;
   color: #333;
   padding: 100px;
   text-align: center; }
+  .landing__header h1 {
+    background: rgba(0, 0, 0, 0.178);
+    color: rgba(240, 227, 227, 0.836);
+    text-shadow: 2px 2px 4px #000000;
+    padding: 100px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.8rem;
+    text-transform: uppercase;
+    font-size: 4rem;
+    margin-bottom: 100px; }
+  .landing__header .btn__googleLogin {
+    background: #ea4335;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white; }
+
+.landing__info {
+  padding-top: 180px;
+  padding-bottom: 230px; }
+
+.landing__info {
+  width: 100%;
+  background: #eeeeee; }
+  .landing__info .info__title {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center; }
+    .landing__info .info__title h2 {
+      font-weight: bold;
+      color: #333;
+      font-size: 5rem; }
+  .landing__info .info__box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center; }
+  .landing__info .info__card {
+    width: 400px;
+    min-height: 360px;
+    margin-bottom: 50px;
+    background: white; }
+    .landing__info .info__card .info__header {
+      padding: 20px 35px;
+      text-align: center; }
+      .landing__info .info__card .info__header img {
+        max-width: 180px;
+        height: auto; }
+    .landing__info .info__card .info__header--one {
+      background: #f69f09; }
+    .landing__info .info__card .info__header--two {
+      background: #31aa53; }
+    .landing__info .info__card .info__header--three {
+      background: #a857bd; }
+    .landing__info .info__card .info__desc {
+      padding: 20px; }
+      .landing__info .info__card .info__desc .info__subtitle {
+        font-weight: bold; }
 
 @media screen and (max-width: 600px) {
-  .landing {
-    padding: 5px; } }
+  .landing__header {
+    padding: 5px; }
+    .landing__header h1 {
+      padding: 20px;
+      letter-spacing: 0.6rem;
+      font-size: 2rem; }
+
+  .landing__info .info__title h2 {
+    font-size: 2rem; }
+  .landing__info .info__box {
+    display: flex;
+    flex-direction: column; }
+  .landing__info .info__card {
+    width: 90%; }
+    .landing__info .info__card .info__desc {
+      padding: 10px; } }
 .content {
   background: #eeeeee;
   position: relative;
