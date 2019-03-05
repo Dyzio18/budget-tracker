@@ -9,6 +9,7 @@ dist/**
 yarn.lock
 yarn-error.log
 note.md
+.sass-cache/
 
 # Logs
 npm-debug.log

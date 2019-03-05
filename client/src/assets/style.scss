@@ -1,20 +1,19 @@
 
 @import './variable';
 
-
+html,body {
+    width: 100%;
+    height: 100%;
+}
 .wrapper{
-    background: $grey;
+    background: $bg;
     min-height: 100vh;
     width: 100%;
 }
 
-.test1{
-    width: 100%;
-    height: 100%;
-    
-}
 
 @import './sass/components/landing';
-@import './sass/components/content';
+@import './sass/components/main';
 @import './sass/components/sidebar';
+
 @import './sass/components/habit/habitNew';

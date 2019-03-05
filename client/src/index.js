@@ -1,5 +1,5 @@
 import './assets/vendor/normalize.css';
-import './assets/vendor/bootstrap.min.css';
+import './assets/vendor/materialize.min.css';
 import './style.css';
 
 import React from 'react';

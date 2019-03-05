@@ -17,14 +17,14 @@ class App extends Component {
 
     render = () => {
         return (
-            <div className="container-fluid wrapper">
+            <div>
                 <BrowserRouter>
-                    <div className="row">
+                    <div className="wrapper">
                         <Sidebar />
-                        <div className="content">
+                        <main className="main">
                             <Route exact path="/habits" component={Dashboard} />
                             <Route path="/habits/new" component={HabitNew} />
-                        </div>
+                        </main>
                     </div>
                 </BrowserRouter>
             </div>

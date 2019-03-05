@@ -1,0 +1,18 @@
+@import '../../variable';
+
+.main {
+    position: absolute;
+    left: 300px;
+    background: #fff;
+    width: calc(100% - 300px);
+    min-height: 100%;
+    display: flex;
+    padding-left: 80px;
+    //justify-content: center;
+}
+
+
+.workspace{
+    max-width: 800px;
+    padding: 20px;
+}

@@ -7,9 +7,9 @@ class Landing extends Component {
 
   render() {
     return (
-        <div>
+        <div className="landing">
             <header className="landing__header">
-                <h1>Habits Tracker</h1>
+                <h1>Budget Tracker</h1>
                 <a href="/auth/google" className="btn btn__googleLogin">
                     <i className="fab fa-google"> </i> Sign in with Google
                 </a>

@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose; 
 const reapetationSchema = require('./Repetition');
+
 /**
  * name <String> - habit title eg. "Meditation"
  * color <String> - color of habit in hex eg. "#432122"

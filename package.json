@@ -1,7 +1,7 @@
 {
-  "name": "learning-react-node.js",
+  "name": "budget-tracker",
   "version": "1.0.0",
-  "description": "learning react & node.js",
+  "description": "budget-tracker",
   "main": "index.js",
   "engines": {
     "node": "*",
@@ -14,11 +14,12 @@
     "dev": "concurrently \"npm run server\" \"npm run client\" ",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "lint-client": "./node_modules/.bin/eslint ./client/**/*.js --fix --cache",
-    "lint-server": "./node_modules/.bin/eslint ./**/*.js --fix --cache "
+    "lint-server": "./node_modules/.bin/eslint ./**/*.js --fix --cache ",
+    "style": "sass --watch client/src/assets/style.scss:client/src/style.css"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Dyzio18/react_node_learning.git"
+    "url": "git+https://github.com/Dyzio18/budget-tracker.git"
   },
   "keywords": [
     "react",
@@ -29,9 +30,9 @@
   "author": "Patryk Nizio",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Dyzio18/react_node_learning/issues"
+    "url": "https://github.com/Dyzio18/budget-tracker/issues"
   },
-  "homepage": "https://github.com/Dyzio18/react_node_learning#readme",
+  "homepage": "https://github.com/Dyzio18/budget-tracker#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
     "concurrently": "^3.5.1",

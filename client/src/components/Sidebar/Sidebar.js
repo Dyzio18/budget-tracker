@@ -25,28 +25,32 @@ class Sidebar extends Component {
     
     render() {
         return (
-            <div className="sidebar"> 
-                <Link to="/habits" className="logo">
-                    Habits Tracker
-                </Link>
+            <aside className="sidebar"> 
                 <ul className="nav">
-                    <li> 
-                        <Link to="/habits"> 
+                    <li className="nav__item logo"> 
+                        <Link to="/habits">
+                            Budget Tracker
+                        </Link>
+                    </li>
+                    <li className="nav__item"> 
+                        <div className="user">
+                            {this.renderAuthStatus()}
+                        </div>  
+                    </li>
+                    <li className="nav__item"> 
+                        <Link to="/habits" className="nav__link"> 
                             <i className="fas fa-archive"></i> 
                             <span>Nawyki</span>
                         </Link> 
                     </li>
-                    <li> 
-                        <Link to="/habits/new"> 
+                    <li className="nav__item"> 
+                        <Link to="/habits/new" className="nav__link"> 
                             <i className="fas fa-calendar"></i> 
                             <span> Dodaj nawyk </span>
                         </Link> 
                     </li>
                 </ul>
-                <div className="sidebar__user">
-                    {this.renderAuthStatus()}
-                </div>
-            </div>
+            </aside>
           );
     }
 

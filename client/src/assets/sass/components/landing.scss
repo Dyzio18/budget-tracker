@@ -1,6 +1,14 @@
 @import '../../variable';
 @import '../common/shadow';
 
+
+.landing {
+    width: 100%;
+}
+
+
+
+// OLD
 .landing__header{
     display: flex;
     justify-content: center;
